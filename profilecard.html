@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      padding-top: 80px;
+    }
+
+    .card {
+      width: 250px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      padding: 32px 24px;
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .card h2 {
+      margin: 16px 0 8px 0;
+    }
+
+    .card p {
+      color: #555;
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="card-container"></div>
+
+  <script>
+    const container = document.getElementById('card-container');
+
+    const card = document.createElement('div');
+    card.className = 'card';
+    
+    const image = document.createElement('img');
+    image.src = 'avatar.png';
+    image.alt = 'Profile Picture';
+    
+    const name = document.createElement('h2');
+    name.textContent = 'Jimmy Mcgill';
+    
+    const job = document.createElement('p');
+    job.textContent = 'Web Developer';
+    
+    const locationText = document.createElement('p');
+    locationText.textContent = 'Phoenix, Arizona';
+    
+    card.appendChild(image);
+    card.appendChild(name);
+    card.appendChild(job);
+    card.appendChild(locationText);
+
+
+    container.appendChild(card);
+  </script>
+</body>
+</html>
